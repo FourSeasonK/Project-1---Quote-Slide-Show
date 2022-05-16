@@ -44,7 +44,7 @@ let quotes = [
     }
 ];
 
-console.log(quotes);
+//console.log(quotes);
 
 /***
  * `getRandomQuote` function
@@ -65,19 +65,19 @@ function getRandomQuote(arrayQut){
 
         ///generate a random number and make it single digit
         let randomNum = (Math.random() * 10);
-        console.log(randomNum);
+        //console.log(randomNum);
 
         //Making random numbers to integers (throwing away the decimal point)
         number = Math.floor(randomNum);
-        console.log("current" + number);
-        console.log("previous" + previous);
+        //console.log("current" + number);
+        //console.log("previous" + previous);
 
         //check if the number is out of scope(quotes.length) or the same number as the previous one
         //If the number is in the scope and not the same as the previous number, it finishes the loop and gets one random number. If not, it loops again.
         if((number >=0 && number <= 6) && previous !== number){
                     previous = number;
                     flag = false;
-                    console.log("get value");
+                    //console.log("get value");
         }
     }
     //store the random number as an index of the array and return one object quote array 
@@ -92,7 +92,7 @@ const printQuote = function(allQuotes){
 
     //to get one random quote
     let randomQuote = getRandomQuote(allQuotes);
-    console.log(randomQuote);
+    //console.log(randomQuote);
     
     //store <p> element as String.
     let PtoHTML1 = "<p class='quote'>" + randomQuote.quote + "</P>" + "<p class='source'>" + randomQuote.source;
@@ -112,7 +112,7 @@ const printQuote = function(allQuotes){
     
     //set the innerHTML of the quote-box div to display HTML elements String.
     document.getElementById('quote-box').innerHTML = PtoHTML1;
-    console.log(PtoHTML1);
+    //console.log(PtoHTML1);
 }
 
 
